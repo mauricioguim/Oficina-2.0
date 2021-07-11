@@ -24,7 +24,7 @@ Para esse desafio técnico foi utilizado [Laravel](http://laravel.com), o melhor
 
 ## Instruções
 
-* Para acessar a página de controle de orçamentos acessar a rota: http://localhost:8000/orcamento/
+* Para acessar a página de controle de orçamentos, acesse a rota: http://localhost:8000/orcamento/
 * Ao buscar um orçamento pela data, entre no formato do exemplo a seguir: 2021-07-10 (Ano, Mês, Dia)
 
 ## Creditos
