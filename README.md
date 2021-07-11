@@ -19,4 +19,4 @@ Para esse desafio técnico foi utilizado [Laravel](http://laravel.com), o melhor
 * Instalar o [Composer](https://getcomposer.org/download)
 * Clonar o repositório: git clone https://github.com/mauricioguim/Oficina-2.0.git
 * Instalar dependências: composer install
-* Crear um esquema simples de banco de dados
+* Criar um esquema simples de banco de dados
