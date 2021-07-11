@@ -133,8 +133,10 @@ class BudgetController extends Controller
     public function search(Request $request)
     {
         $str = $request->input('search');
-        $budgets = Budget::where('client', 'LIKE', '%' . $str . '%')->orderBy('created_at', 'DESC')->get();
+        $budgets = Budget::where('client', 'LIKE', '%' . $str . '%')
+        ->orWhere('salesman', 'LIKE', '%' . $str . '%')
+        ->orWhere('created_at', 'LIKE', '%' . $str . '%')->orderBy('created_at', 'DESC')->get();
 
-        return view('admin.budget.index', compact('budgets'));
+        return view('admin.budget.index', compact('budgets', 'str'));
     }
 }

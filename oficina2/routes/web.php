@@ -15,9 +15,5 @@ use App\Http\Controllers\BudgetController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::resource('/orcamento', BudgetController::class);
 Route::post('/orcamento/search', [BudgetController::class, 'search'])->name('search');

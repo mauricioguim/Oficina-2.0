@@ -59,8 +59,8 @@
                             </form>
 
                             <div class="d-flex justify-content-end mt-3">
-                                <button type="submit" form="form-budget" style="background: white; font-size: 20px !important; font: inherit; vertical-align: baseline; outline: none; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; color: #555;" class="btn btn-success mr-2">Salvar</button>
-                                <a href=" {{ route('orcamento.index') }}" class="btn btn-secondary">Voltar</a>
+                                <button type="submit" form="form-budget" style="font-weight: bold !important; background: white; font-size: 20px !important; font: inherit; vertical-align: baseline; outline: none; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; color: #555;" class="btn btn-success mr-2">Salvar</button>
+                                <a href=" {{ route('orcamento.index') }}" class="btn btn-secondary" style="font-weight: bold;">Voltar</a>
                             </div>
                         </div>
                     </div>

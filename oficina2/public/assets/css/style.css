@@ -25,6 +25,17 @@ input {
     font-weight: bold;
 }
 
+.bottom-back{
+  width: 200px !important;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  font: inherit;
+  font-weight: bold;
+}
+
 .btn-edit{
     width: 35px;
     height: 30px;

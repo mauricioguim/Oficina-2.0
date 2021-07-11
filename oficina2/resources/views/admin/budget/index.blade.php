@@ -70,6 +70,10 @@
                 @endforeach
             </tbody>
         </table>
+        @isset($str)
+            <div  class="bottom-back"><a href="{{ route('orcamento.index') }}">Voltar</a></div>
+        @else
+        @endisset
         </div> 
     </body>
 </html>
