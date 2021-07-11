@@ -17,5 +17,5 @@ Para esse desafio técnico foi utilizado [Laravel](http://laravel.com), o melhor
 ## Installation
 
 * Instalar o [Composer](https://getcomposer.org/download)
-* Clonar o repositório: `git clone https://github.com/mauricioguim/Oficina-2.0.git
-* Instalar dependências: `composer install
+* Clonar o repositório: git clone https://github.com/mauricioguim/Oficina-2.0.git
+* Instalar dependências: composer install
