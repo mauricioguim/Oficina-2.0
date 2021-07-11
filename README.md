@@ -20,3 +20,7 @@ Para esse desafio técnico foi utilizado [Laravel](http://laravel.com), o melhor
 * Clonar o repositório: git clone https://github.com/mauricioguim/Oficina-2.0.git
 * Instalar dependências: composer install
 * Criar um esquema simples de banco de dados
+
+## Creditos
+
+* [Maurício Moura Guimarães](https://github.com/mauricioguim)
