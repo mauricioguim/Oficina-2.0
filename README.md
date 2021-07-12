@@ -30,3 +30,6 @@ Para esse desafio técnico foi utilizado [Laravel](http://laravel.com), o melhor
 ## Creditos
 
 * [Maurício Moura Guimarães](https://github.com/mauricioguim)
+
+
+* [Jake Rochele](https://jakerocheleau.com/), do qual utilizei o template para a [Tabela](https://codepen.io/jakestuts/pen/tGpju).
