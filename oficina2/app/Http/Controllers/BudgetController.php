@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 
+use App\Http\Requests\BudgetRequest;
 use Illuminate\Http\Request;
 use App\Models\Budget;
 
@@ -23,7 +24,7 @@ class BudgetController extends Controller
      */
     public function index()
     {
-        $budgets = $this->budgets->all();
+        $budgets = $this->budgets->paginate(10);
         return view('admin.budget.index', compact('budgets'));
     }
 
@@ -43,16 +44,8 @@ class BudgetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BudgetRequest $request)
     {
-        $request->validate([
-
-                'client' => ['required', 'string'],
-                'salesman' => ['required', 'string'],
-                'description' => ['required', 'string'],
-                'value' => ['required', 'string'],
-        ]);
-
         $datas = $request->all();
         
         $this->budgets->create($datas);
@@ -67,13 +60,13 @@ class BudgetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
-        $budget = $this->budgets->find($id);
+        $budgets = $this->budgets->find($id);
 
-        return json_encode($budget);
+        return json_encode($budgets);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -94,17 +87,8 @@ class BudgetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BudgetRequest $request, $id)
     {
-        //Não use validações em controllers e sim em classes de Requisição.
-        $request->validate([
-            
-                'client' => ['required', 'string'],
-                'salesman' => ['required', 'string'],
-                'description' => ['required', 'string'],
-                'value' => ['required', 'string'],
-        ]);
-
         $datas = $request->all();
         $budget = $this->budgets->find($id);
         
@@ -135,7 +119,7 @@ class BudgetController extends Controller
         $str = $request->input('search');
         $budgets = Budget::where('client', 'LIKE', '%' . $str . '%')
         ->orWhere('salesman', 'LIKE', '%' . $str . '%')
-        ->orWhere('created_at', 'LIKE', '%' . $str . '%')->orderBy('created_at', 'DESC')->get();
+        ->orWhere('created_at', 'LIKE', '%' . $str . '%')->orderBy('created_at', 'DESC')->paginate(10);
 
         return view('admin.budget.index', compact('budgets', 'str'));
     }

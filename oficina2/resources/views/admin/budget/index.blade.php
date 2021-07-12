@@ -70,10 +70,15 @@
                 @endforeach
             </tbody>
         </table>
-        @isset($str)
-            <div  class="bottom-back"><a href="{{ route('orcamento.index') }}">Voltar</a></div>
-        @else
-        @endisset
+        <div style="margin-top: 2%; display: flex;justify-content: space-between">
+            @isset($str)
+                <div  class="bottom-back"><a href="{{ route('orcamento.index') }}">Voltar</a></div>
+            @else
+            @endisset
+            <div class="d-flex justify-content-center">
+                {!! $budgets->links() !!}
+            </div>
+        </div>
         </div> 
     </body>
 </html>
